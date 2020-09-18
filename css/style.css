@@ -1,0 +1,399 @@
+
+/* header */
+.navbar {
+	background-color: #FFAA2B;
+	color: #FFF;
+	padding-right: 0.5rem;
+	padding-left: 1rem;
+	
+}
+.navbar a {
+	color: #FFF;
+}
+.nav-item {
+	text-align: right;	
+}
+
+
+a.nav-link {
+  position: relative;
+  /* display: inline-block; */
+	text-decoration: none;
+	padding: 4px;
+}
+a.nav-link::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: .1s;
+}
+a.nav-link.non-account:hover::after {
+  bottom: 1px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+a.dropdown-item {
+	color: black;
+}
+.dropdown-menu {
+	padding: 0;
+}
+
+
+#humberger {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#humberger div {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 24px;
+  background-color:  #FFF;
+  border-radius: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#humberger div:nth-of-type(1) {
+  top: 0;
+}
+#humberger div:nth-of-type(2) {
+  top: 10px;
+}
+#humberger div:nth-of-type(3) {
+  bottom: 0;
+}
+
+
+.navbar-toggler .navbar-toggler-icon {
+	width: 0;
+}
+
+.lead-copy {
+	font-size: 37px;
+}
+.jumbotron-extend {
+	background-image: url(https://aws-and-infra-wp-toisute.s3-ap-northeast-1.amazonaws.com/self-upload/website/header-image_01.jpg) ;
+	background-position: center top;
+	background-size: cover;
+	height: 500px;
+}
+.jumbotron-bg-img {
+	position: absolute;
+  background-color: rgba(0,0,0,0.2);
+	height: 500px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+/* body 短いページでもフッターを適切に表示する（onにすると、safariでページ下部に余白ができる）*/
+/* body {
+  display: flex;
+  flex-flow: column;
+  min-height: 300vh;
+}
+main {
+	flex: 1;
+} */
+
+/* footer */
+.footer {
+	width: 100%;
+	padding-top: 20px;
+	background-color: #FFAA2B;
+	color: #fff;
+	text-align: center;
+	/* フッター移行の余白をなくす */
+	/* position: absolute;
+  bottom: 0; */
+}
+.horizontal-list {
+	margin: 0 auto;
+}
+.horizontal-list .horizontal-item {
+	display: inline-block;
+	padding: 0 15px;
+	letter-spacing: 1px;
+}
+.horizontal-list .horizontal-item + .horizontal-item {
+	border-left: 1px solid#fff;
+}
+.horizontal-list .horizontal-item a {
+	color: #fff;
+	font-size: 1.1rem;
+}
+
+.footer p a {
+	color: #fff;
+}
+
+
+
+/* Color */
+.color-custom {
+	background-color: #FFAA2B;
+	color: #FFF;	
+}
+
+/* design */
+.h3-line {
+	border-bottom: 1px solid #12202F;
+	border-left: 10px solid #12202F;
+	padding: 7px;
+}
+
+.material-desc-cat, .material-desc-content {
+	padding-left: 20px;
+}
+.card-new-custom {
+	background-color: rgba(255, 170, 43, 0.2);
+
+}
+.btn.btn-warning{
+	color: #fff;
+}
+
+
+/* main 背景色*/
+main {
+	background-color: rgba(255, 170, 43, 0.2);
+	color: #505050;
+
+}
+
+/* wrapper （onだとiPadで余白が表示される）*/
+/* .wrapper {
+	padding: 2rem 1.0rem;
+} */
+
+/* いいねボタン */
+.btn-good, .btn-good-non-user{
+	display: inline-block;
+	/* padding: 0 8px; */
+	cursor: pointer;
+}
+.btn-good:hover, .btn-good-non-user:hover{
+	color: #f44336;
+}
+.active{
+	color: #f44336;
+}
+.btn-good .active{
+	color: #f44336;
+}
+i.fa-heart {
+	margin: 8px;
+}
+
+/* モーダル（プロフィール編集） */
+
+.content{
+	margin: 0 auto;
+	/* padding: 40px; */
+}
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.8);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 0px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 80%;
+}
+a.js-profile-modal-open {
+	color: #505050;
+}
+
+
+
+/* ページネーション（search.php） */
+.pagination li a {
+	color: #505050;
+	border: none;
+	background-color: rgba(255, 170, 43, 0.2);
+}
+.pagination li a:hover {
+	color: #505050;
+	background-color: #FFAA2B;
+}
+
+/* 検索結果 */
+.search-results a {
+	color: #505050;
+}
+.search-results a:hover {
+	color: #505050;
+}
+
+/* ユーザープロフィール */
+.user_profile_img {
+	background-image:url(https://aws-and-infra-wp-toisute.s3-ap-northeast-1.amazonaws.com/self-upload/website/white_img.jpg);
+}
+.btn-file-upload {
+	background-color: #a9a9a9;
+}
+
+
+/* ユーザープロフィールカラム */
+.user_profile_info, .user_data_follower, .user_data_follow {
+	background-color: #FFFBF7;
+	padding: 16px;
+}
+
+@media screen and (max-width:767px) {
+	.user_sub_info {
+		padding: 0;
+	}
+	}
+
+	.user_profile_info {
+		text-align: center;
+	}
+	.user_data_analysis {
+		margin-bottom: 24px;
+	}
+.user_data_analysis {
+	background-color: #FFFBF7;
+	padding: 16px;
+}
+.user_data_post {
+	background-color: #FFFBF7;
+	padding: 16px;
+}
+
+.user_data_setting, .user_data_pwChange, .user_data_accountDelete, .review_edit {
+	padding: 0;
+}
+
+
+
+
+/* 新navbar */
+.navbar {
+  min-width: 320px;
+}
+
+.navbar-brand {
+  /* margin-left: -15px; */
+}
+
+#header-buttons {
+  margin: 0px;
+}
+
+#header-buttons > li {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.navbar-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: none;
+  width: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px 0px;
+  margin-top: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+/* end of 新nabvar */
+
+
+/* リンク色 */
+	/* ユーザー名 */
+	.review_user_name a {
+	color: #505050;
+	}
+	/* アクティビティログ */
+	a.activity-log {
+		color: #505050;
+	}
+
+
+/* アイコン装飾 */
+i.fa-gratipay {
+	color: #FF821C;
+}
+
+/* レスポンシブで横向きにした際に余白ができる不具合への対処 */
+.body-wrapper {
+  width:100%;
+  overflow:hidden;
+}
+
+
+/* フッター下の余白をなくす */
+html, body {
+  height: 100%;
+}
+.body-wrapper {
+  position:relative;
+  min-height: 100%;
+}
+main {
+	padding-bottom:134px; /*フッターの高さと同じにする*/
+}
+footer {
+	position:absolute;
+	bottom:0;
+}
+/* html, body {
+	position: relative;
+	
+  min-height: 100%;
+  padding-bottom: 134px;
+  /* box-sizing: border-box; */
+/* }
+
+.body-wrapper {
+ display: flx;
+ flex- direction: column;
+ min-height:100vh;
+}
+
+
+footer {
+	margin-top: auto; */
+	/* position: absolute;
+	left: 0;
+  bottom: 0; */
+  /* height: 100px; */
+
+	main{
+		min-height: 75vh;
+
+}
+
